@@ -14,7 +14,7 @@ fn main() {
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     let result = Command::new("python")
-        .args(&["file.py"])
+        .arg("file.py")
         .status()
         .expect("Failed to run python script :(");
     println!("status: {}", result);
