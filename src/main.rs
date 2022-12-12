@@ -1,6 +1,8 @@
 use std::io::Read;
 use std::process::Command;
 
+use rust_code_generator::Generator;
+
 fn main() {
     let _alphabet = vec![
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
@@ -18,4 +20,6 @@ fn main() {
         .status()
         .expect("Failed to run python script :(");
     println!("status: {}", result);
+
+    Generator::generate();
 }
